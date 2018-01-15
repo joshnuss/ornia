@@ -1,5 +1,5 @@
-defmodule Ornia.WebWeb.PageControllerTest do
-  use Ornia.WebWeb.ConnCase
+defmodule Ornia.Web.PageControllerTest do
+  use Ornia.Web.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

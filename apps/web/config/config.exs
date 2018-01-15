@@ -10,10 +10,10 @@ config :web,
   namespace: Ornia.Web
 
 # Configures the endpoint
-config :web, Ornia.WebWeb.Endpoint,
+config :web, Ornia.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "RZxNZyDRVdUQfkZ3mvPb+XD1FH16ryf0/DL+yMWd1a10jtaRUkPg/6gs5aMhik6E",
-  render_errors: [view: Ornia.WebWeb.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: Ornia.Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Ornia.Web.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

@@ -9,7 +9,7 @@ defmodule Ornia.Web.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(Ornia.WebWeb.Endpoint, []),
+      supervisor(Ornia.Web.Endpoint, []),
       # Start your own worker by calling: Ornia.Web.Worker.start_link(arg1, arg2, arg3)
       # worker(Ornia.Web.Worker, [arg1, arg2, arg3]),
     ]
@@ -23,7 +23,7 @@ defmodule Ornia.Web.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    Ornia.WebWeb.Endpoint.config_change(changed, removed)
+    Ornia.Web.Endpoint.config_change(changed, removed)
     :ok
   end
 end

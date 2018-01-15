@@ -19,3 +19,10 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+import {render} from 'preact';
+
+function App() {
+  return <h1>Hello World!</h1>;
+}
+
+render(<App/>, document.body);

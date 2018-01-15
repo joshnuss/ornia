@@ -1,4 +1,4 @@
-defmodule Ornia.WebWeb.ErrorHelpers do
+defmodule Ornia.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule Ornia.WebWeb.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(Ornia.WebWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Ornia.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Ornia.WebWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Ornia.Web.Gettext, "errors", msg, opts)
     end
   end
 end

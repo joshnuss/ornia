@@ -46,7 +46,11 @@ exports.config = {
   plugins: {
     babel: {
       // Do not use ES6 compiler in vendor code
-      ignore: [/vendor/]
+      ignore: [/vendor/],
+      presets: ['latest'],
+      plugins: [
+        ['transform-react-jsx', {pragma: 'preact.h'}]
+      ]
     }
   },
 
@@ -57,6 +61,11 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    enabled: true,
+    globals: {preact: 'preact'},
+    aliases: {
+     'react': 'preact-compat',
+     'react-dom': 'preact-compat'
+    }
   }
 };

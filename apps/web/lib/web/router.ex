@@ -1,5 +1,5 @@
-defmodule Ornia.WebWeb.Router do
-  use Ornia.WebWeb, :router
+defmodule Ornia.Web.Router do
+  use Ornia.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule Ornia.WebWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Ornia.WebWeb do
+  scope "/", Ornia.Web do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Ornia.WebWeb do
+  # scope "/api", Ornia.Web do
   #   pipe_through :api
   # end
 end

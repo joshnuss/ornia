@@ -1,8 +1,8 @@
-defmodule Ornia.WebWeb.UserSocket do
+defmodule Ornia.Web.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", Ornia.WebWeb.RoomChannel
+  # channel "room:*", Ornia.Web.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -30,7 +30,7 @@ defmodule Ornia.WebWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     Ornia.WebWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     Ornia.Web.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

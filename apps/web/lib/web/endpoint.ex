@@ -1,7 +1,7 @@
-defmodule Ornia.WebWeb.Endpoint do
+defmodule Ornia.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :web
 
-  socket "/socket", Ornia.WebWeb.UserSocket
+  socket "/socket", Ornia.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,7 +38,7 @@ defmodule Ornia.WebWeb.Endpoint do
     key: "_web_key",
     signing_salt: "wxgc4B8r"
 
-  plug Ornia.WebWeb.Router
+  plug Ornia.Web.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

@@ -1,5 +1,5 @@
-defmodule Ornia.WebWeb.ErrorView do
-  use Ornia.WebWeb, :view
+defmodule Ornia.Web.ErrorView do
+  use Ornia.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"
